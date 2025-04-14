@@ -70,6 +70,9 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
   const [passwordError, setPasswordError] = React.useState(false);
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
   const [open, setOpen] = React.useState(false);
+  {/**Mostrar objeto */}
+  const{data:session}=useSession()
+  console.log(session)
 
   const handleClickOpen = () => {
     setOpen(true);
